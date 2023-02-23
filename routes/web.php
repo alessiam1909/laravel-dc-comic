@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController as ComicController;
+use App\Http\Controllers\PageController as PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,7 @@ use App\Http\Controllers\ComicController as ComicController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::resource('/', PageController::class);
 Route::get('/', [ComicController::class, 'getComic'])->name('home');
 
 Route::get('/home/{slug}', [ComicController::class, 'getComicBySlug'])->name('details_fumetto');
