@@ -1,0 +1,73 @@
+@import '~resources/scss/partials/_mixins.scss';
+@import '~resources/scss/partials/_variables.scss';
+
+
+header {
+    .blu-ctn {
+        background-color: $blue;
+        display: flex;
+        align-items: center;
+
+
+        .col-visa {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 70%;
+            margin: 0 auto;
+
+            p {
+                color: white;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    .main-header {
+        padding: 30px 20px;
+        @include width70;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        ul {
+            margin: 30px 20px;
+            display: flex;
+            list-style-type: none;
+
+            .active {
+                color: $blue;
+                border-bottom: 3px solid $blue;
+                padding-bottom: 20px;
+            }
+
+            li a {
+                color: gray;
+                padding: 1em;
+                font-size: 15px;
+                text-decoration: none;
+
+                text-transform: capitalize;
+
+            }
+        }
+
+    }
+}
+
+.search {
+    width: 200px;
+
+
+    input {
+        height: 40px;
+        width: 150px;
+        padding: 15px;
+        outline: none;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0 2px 5px rgba(2, 2, 7, 0.4);
+        font-size: 15px;
+    }
+
+}

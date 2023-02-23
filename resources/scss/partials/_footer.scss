@@ -1,0 +1,105 @@
+@import '~resources/scss/partials/_mixins.scss';
+@import '~resources/scss/partials/_variables.scss';
+
+footer {
+
+
+    .container-ft {
+        background-image: url('/resources/images/footer-bg.jpg');
+        background-size: cover;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+
+        .links {
+            padding: 20px 0;
+        }
+
+        .ctn-dc-img {
+            background-image: url('/resources/images/dc-logo-bg.png');
+            background-size: cover;
+            background-position: right center;
+            width: 600px;
+        }
+
+
+        div {
+            padding: 0em 2em;
+        }
+
+        li {
+            color: white;
+            list-style-type: none;
+        }
+
+        li a {
+            color: gray;
+            text-decoration: none;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+        .copyright {
+            padding-left: 60px;
+            font-size: 12px;
+
+            a {
+                text-decoration: none;
+
+            }
+        }
+    }
+
+    .footer-btn {
+        border: 2px solid $blue;
+        background-color: rgba(48, 48, 48, 255);
+        color: white;
+        margin: 20px 15px;
+        padding: 10px;
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+    }
+
+
+    .social {
+        height: 150px;
+        background-color: #303030;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+
+        .icons {
+            display: flex;
+            align-items: center;
+
+            ul {
+                display: flex;
+                gap: .5em;
+
+            }
+
+            li {
+                display: flex;
+                color: white;
+                list-style-type: none;
+
+                &:hover {
+                    filter: brightness(100);
+                }
+            }
+
+            .follow-us {
+                color: $blue;
+                padding-right: 10px;
+            }
+
+        }
+    }
+
+}
