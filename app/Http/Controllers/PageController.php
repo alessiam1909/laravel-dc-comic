@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Comic;
 
 class PageController extends Controller
 {
@@ -16,7 +17,7 @@ class PageController extends Controller
         $fumetti = Comic::all();
         $nav_menu = config('db.nav');
         $icons  =config('db.social_icons');
-        return view('home', compact('fumetti', 'nav_menu', 'icons'));
+        return view('homepage', compact('fumetti', 'nav_menu', 'icons'));
     }
 
     /**
