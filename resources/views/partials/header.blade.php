@@ -12,11 +12,15 @@
         <div>
             <nav>
                 <ul>
-                    @foreach($nav_menu as $elem)
                     <li>
-                        <a class="{{Route::currentRouteName() == '#' ? 'active' : ''}}" href="{{$elem['url']}}">{{$elem['label']}}</a>
+                        <a class="{{Route::currentRouteName() == 'Homepage' ? 'active' : ''}}" href="{{route('homepage')}}">Homepage</a>
                     </li>
-                    @endforeach
+                    <li>
+                        <a class="{{Route::currentRouteName() == 'Fumetti' ? 'active' : ''}}" href="{{route('comics.index')}}">Fumetti</a>
+                    </li>
+                    <li>
+                        <a class="{{Route::currentRouteName() == 'Aggiungi fumetto' ? 'active' : ''}}" href="{{route('comics.create')}}">Aggiungi fumetto</a>
+                    </li>
                 </ul>
             </nav>
         </div>

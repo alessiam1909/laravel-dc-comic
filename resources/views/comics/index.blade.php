@@ -7,13 +7,13 @@
     <div class="current-button">CURRENT SERIES</div>
     <div class="container-cards">
         <div class="row-fumetti">
-            @foreach ($fumetti as $fumetto)
+            @foreach ($comics as $comic)
                 <div class="col-fumetto">
-                    <a href="{{ route('details_fumetto', ['slug' => $fumetto['slug']]) }}">
+                    <a href="{{ route('comics.show', ['comic' => $comic['id']]) }}">
                         <div class="contenitore-img">
-                            <img class="img-fumetto" src="{{$fumetto['thumb']}}" alt="{{$fumetto['title']}}">
+                            <img class="img-fumetto" src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
                         </div>
-                        <h3 class="title">{{$fumetto['title']}}</h3>
+                        <h3 class="title">{{$comic['title']}}</h3>
                     </a>
                 </div> 
             @endforeach

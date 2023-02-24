@@ -14,8 +14,7 @@ use App\Http\Controllers\PageController as PageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('/', PageController::class)->name('homepage');
+Route::get('/', [ComicController::class, 'getHome'])->name('homepage');
 //Route::get('/', [ComicController::class, 'getComic'])->name('home');
 
-Route::get('/home/{slug}', [ComicController::class, 'getComicBySlug'])->name('details_fumetto');
-
+Route::resource('comics', PageController::class);

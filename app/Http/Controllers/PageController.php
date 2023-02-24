@@ -14,10 +14,10 @@ class PageController extends Controller
      */
     public function index()
     {
-        $fumetti = Comic::all();
+        $comics = Comic::all();
         $nav_menu = config('db.nav');
         $icons  =config('db.social_icons');
-        return view('homepage', compact('fumetti', 'nav_menu', 'icons'));
+        return view('comics.index', compact('comics', 'nav_menu', 'icons'));
     }
 
     /**
@@ -49,7 +49,13 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        $comic = Comic::find($id);
+        $icons  =config('db.social_icons');
+        $single = [
+            'single' => $comic
+        ];
+
+        return view('comics.show', $single, compact('icons'));
     }
 
     /**
