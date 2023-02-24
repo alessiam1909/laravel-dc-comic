@@ -15,7 +15,7 @@ use App\Http\Controllers\PageController as PageController;
 |
 */
 Route::resource('/', PageController::class);
-Route::get('/', [ComicController::class, 'getComic'])->name('home');
+//Route::get('/', [ComicController::class, 'getComic'])->name('home');
 
 Route::get('/home/{slug}', [ComicController::class, 'getComicBySlug'])->name('details_fumetto');
 

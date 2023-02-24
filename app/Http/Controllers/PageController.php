@@ -13,7 +13,10 @@ class PageController extends Controller
      */
     public function index()
     {
-        //
+        $fumetti = Comic::all();
+        $nav_menu = config('db.nav');
+        $icons  =config('db.social_icons');
+        return view('home', compact('fumetti', 'nav_menu', 'icons'));
     }
 
     /**
