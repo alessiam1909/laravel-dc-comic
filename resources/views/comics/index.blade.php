@@ -14,6 +14,15 @@
                             <img class="img-fumetto" src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
                         </div>
                         <h3 class="title">{{$comic['title']}}</h3>
+                        <a href="" class="btn btn-sm btn-square btn-warning">
+                            <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="" class="btn btn-sm btn-square btn-danger">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                        <a href="{{route('comics.create')}}" class="btn btn-sm btn-square btn-success">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
                     </a>
                 </div> 
             @endforeach
