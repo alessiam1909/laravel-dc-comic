@@ -11,6 +11,15 @@
         <h2>{{$single['title']}}</h2>
         <p>Price: {{$single['price']}}</p>
         <p>Description: {{$single['description']}} </p>
+        <a href="" class="btn btn-sm btn-square btn-warning">
+            <i class="fa-solid fa-pen"></i>
+        </a>
+        <a href="" class="btn btn-sm btn-square btn-danger">
+            <i class="fa-solid fa-trash"></i>
+        </a>
+        <a href="{{route('comics.create')}}" class="btn btn-sm btn-square btn-success">
+            <i class="fa-solid fa-plus"></i>
+        </a>
     </div>
     <div>
         <h4>ADVERTISEMENT</h4>

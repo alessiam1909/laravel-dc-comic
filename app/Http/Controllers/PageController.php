@@ -27,7 +27,8 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        $icons  =config('db.social_icons');
+        return view('comics.create', compact('icons'));
     }
 
     /**
@@ -38,7 +39,16 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+
+        $newComic = new Comic();
+        $new_comic->title = $form_data['title'];
+        $new_comic->description = $form_data['description'];
+        $new_comic->thumb = $form_data['thumb'];
+        $new_comic->price = $form_data['price'];
+        $new_comic->series = $form_data['series'];
+        $new_comic->sale_date = $form_data['sale_date'];
+        $new_comic->type = $form_data['type'];
     }
 
     /**
