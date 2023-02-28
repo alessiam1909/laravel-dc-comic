@@ -11,7 +11,7 @@
         <h2>{{$single['title']}}</h2>
         <p>Price: {{$single['price']}}</p>
         <p>Description: {{$single['description']}} </p>
-        <a href="" class="btn btn-sm btn-square btn-warning">
+        <a href="{{route('comics.edit', ['comic' =>$single->id])}}" class="btn btn-sm btn-square btn-warning">
             <i class="fa-solid fa-pen"></i>
         </a>
         <a href="" class="btn btn-sm btn-square btn-danger">

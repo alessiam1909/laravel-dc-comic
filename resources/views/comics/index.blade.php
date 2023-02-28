@@ -14,7 +14,7 @@
                             <img class="img-fumetto" src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
                         </div>
                         <h3 class="title">{{$comic['title']}}</h3>
-                        <a href="" class="btn btn-sm btn-square btn-warning">
+                        <a href="{{route('comics.edit', ['comic' =>$comic->id])}}" class="btn btn-sm btn-square btn-warning">
                             <i class="fa-solid fa-pen"></i>
                         </a>
                         <a href="" class="btn btn-sm btn-square btn-danger">
