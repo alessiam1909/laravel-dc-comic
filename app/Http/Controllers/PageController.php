@@ -124,7 +124,13 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $data = [
+            'message' => 'Il fumetto '.$comic->title.'  è stato cancellato correttamente!'
+        ];
+        $comic->delete();
+        return redirect()->route('comics.index', $data);
+
     }
 
     private function validation($data){
